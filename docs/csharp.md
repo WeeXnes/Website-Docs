@@ -1,5 +1,7 @@
 # C# OOP Zusammenfassung
 
+**Hier sind die Wichtigsten Aufgaben für die Programmier-Aufgabe zusammengeschrieben**
+
 ## Grundlagen
 #### Variablen Deklaration:
 
@@ -211,4 +213,20 @@ class Mitarbeiter : Person
 
 
 #### Polymorphie
+
+Funktionen/Methoden können den gleichen Namen aber unterschiedliche Eingabe Parameter, Funktionen Rümpfe und Rückgabewerte haben
+Beispiel:
+
+```cs
+void ausgabe(string _test)  
+{  
+    Console.WriteLine("Der gegebene parameter ist: " + _test);  
+}  
+void ausgabe(int _test)  
+{  
+    Console.WriteLine("Der gegebene parameter ist: " + _test);  
+}
+```
+Gleiches kann auch mit Konstruktoren gemacht werden um Objekte auf verschiedene Arten zu Initialisieren
+
 
