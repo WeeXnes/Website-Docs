@@ -230,3 +230,66 @@ void ausgabe(int _test)
 Gleiches kann auch mit Konstruktoren gemacht werden um Objekte auf verschiedene Arten zu Initialisieren
 
 
+
+#### Lösung für die Programmier-Aufgabe
+```cs
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication13
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            Schueler s1 = new Schueler("Max", 15, "7c");
+            s1.NoteHinzufügen(4);
+            s1.NoteHinzufügen(2);
+            s1.DurchschnittBerechnen();
+        }
+        class Person  
+        {  
+            private string name;  
+            private int alter;  
+            
+            public Person(string _name, int _alter)  
+            {  
+                this.alter = _alter;  
+                this.name = _name;  
+            }  
+            
+        }
+
+        class Schueler : Person
+        {
+            private string Klasse;
+            private List<int> noten = new List<int>();
+
+            public Schueler(string _name, int _alter, string _klasse) : base(_name, _alter)
+            {
+                this.Klasse = _klasse;
+            }
+
+            public void NoteHinzufügen(int note)
+            {
+                noten.Add(note);
+            }
+
+            public void DurchschnittBerechnen()
+            {
+                int gesamt = 0;
+                foreach (var note in this.noten)
+                {
+                    gesamt += note;
+                }
+
+                double durchschnitt = gesamt / this.noten.Count;
+                Console.WriteLine("Durchschnitt ist: " + durchschnitt);
+            }
+            
+        }
+
+    }
+}
+```
+
