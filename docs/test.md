@@ -1,5 +1,5 @@
 # This is a test
-```java
+```cs
 public class Test {
   public void foo() {}
 }
